@@ -1,0 +1,10 @@
+use inc::Module::Install;
+name 'POE-Filter-IASLog';
+author 'Chris Williams';
+version_from 'lib/POE/Filter/IASLog.pm';
+abstract_from 'lib/POE/Filter/IASLog.pm';
+license 'perl';
+build_requires 'Test::More' => 0.47;
+requires 'POE' => 0.38;
+requires 'Parse::IASLog' => 0.01;
+WriteAll;
