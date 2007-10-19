@@ -5,14 +5,15 @@ use Parse::IASLog;
 use base qw(POE::Filter);
 use vars qw($VERSION);
 
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 sub new {
   my $class = shift;
   my %opts = @_;
   $opts{lc $_} = delete $opts{$_} for keys %opts;
+  $opts{enumerate} = 1 unless defined $opts{enumerate} and !$opts{enumerate};
   $opts{BUFFER} = [];
-  $opts{IAS} = Parse::IASLog->new();
+  $opts{IAS} = Parse::IASLog->new( enumerate => $opts{enumerate} );
   return bless \%opts, $class;
 }
 
@@ -69,7 +70,10 @@ It is intended to be used in a stackable filter, L<POE::Filter::Stackable>, with
 
 =item new
 
-Creates a new POE::Filter::IASLog object.
+Creates a new POE::Filter::IASLog object. Takes one optional parameter:
+
+  'enumerate', set to a false value to disable the enumeration of known
+	       attribute values, default is 1;
 
 =back
 

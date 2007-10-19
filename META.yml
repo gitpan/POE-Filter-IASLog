@@ -16,5 +16,5 @@ no_index:
     - t
 requires: 
   POE: 0.38
-  Parse::IASLog: 0.01
-version: 0.01
+  Parse::IASLog: 0.05
+version: 0.02

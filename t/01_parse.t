@@ -4,7 +4,7 @@ BEGIN { use_ok('POE::Filter::IASLog') };
 
 my $original = [ '10.10.10.10,client,06/04/1999,14:42:19,IAS,CLIENTCOMP,6,2,7,1,5,9,61,5,64,1,65,1,31,1' ];
 
-my $filter = POE::Filter::IASLog->new();
+my $filter = POE::Filter::IASLog->new( enumerate => 0 );
 
 isa_ok( $filter, 'POE::Filter::IASLog' );
 
