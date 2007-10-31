@@ -1,6 +1,6 @@
 use inc::Module::Install;
 name 'POE-Filter-IASLog';
-author 'Chris Williams';
+author 'Chris Williams <chris@bingosnet.co.uk>';
 version_from 'lib/POE/Filter/IASLog.pm';
 abstract_from 'lib/POE/Filter/IASLog.pm';
 license 'perl';

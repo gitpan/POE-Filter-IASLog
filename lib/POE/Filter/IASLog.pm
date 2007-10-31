@@ -5,7 +5,7 @@ use Parse::IASLog;
 use base qw(POE::Filter);
 use vars qw($VERSION);
 
-$VERSION = '0.02';
+$VERSION = '1.00';
 
 sub new {
   my $class = shift;
