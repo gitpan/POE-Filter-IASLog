@@ -5,7 +5,7 @@ use Parse::IASLog;
 use base qw(POE::Filter);
 use vars qw($VERSION);
 
-$VERSION = '1.00';
+$VERSION = '1.01';
 
 sub new {
   my $class = shift;
@@ -41,6 +41,14 @@ sub get_pending {
 
 sub put {
   return;
+}
+
+sub clone {
+  my $self = shift;
+  my $nself = { };
+  $nself->{$_} = $self->{$_} for keys %{ $self };
+  $nself->{BUFFER} = [ ];
+  return bless $nself, ref $self;
 }
 
 1;
@@ -97,6 +105,10 @@ Returns the filter's partial input buffer.
 =item put
 
 The put method is not implemented.
+
+=item clone
+
+Makes a copy of the filter, and clears the copy's buffer.
 
 =back
 

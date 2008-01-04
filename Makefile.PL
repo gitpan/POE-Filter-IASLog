@@ -6,5 +6,5 @@ abstract_from 'lib/POE/Filter/IASLog.pm';
 license 'perl';
 build_requires 'Test::More' => 0.47;
 requires 'POE' => 0.38;
-requires 'Parse::IASLog' => 0.05;
+requires 'Parse::IASLog' => 1.00;
 WriteAll;
