@@ -1,6 +1,9 @@
 Change log for POE::Filter::IASLog
 ==================================
 
+1.02	Fri Mar  7 07:56:01 GMT 2008
+	- Kwalitee fixes.
+
 1.01	Fri Jan  4 10:00:49 GMT 2008
 	- Added clone() and updated tests
 
