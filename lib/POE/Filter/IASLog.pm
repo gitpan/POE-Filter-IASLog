@@ -6,7 +6,7 @@ use Parse::IASLog;
 use base qw(POE::Filter);
 use vars qw($VERSION);
 
-$VERSION = '1.02';
+$VERSION = '1.04';
 
 sub new {
   my $class = shift;
@@ -116,6 +116,12 @@ Makes a copy of the filter, and clears the copy's buffer.
 =head1 AUTHOR
 
 Chris C<BinGOs> Williams <chris@bingosnet.co.uk>
+
+=head1 LICENSE
+
+Copyright C<(c)> Chris Williams
+
+This module may be used, modified, and distributed under the same terms as Perl itself. Please see the license that came with your Perl distribution for details.
 
 =head1 SEE ALSO
 
